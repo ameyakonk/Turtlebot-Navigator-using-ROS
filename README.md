@@ -60,3 +60,9 @@ To view the rosbag, run the commands
 cd <path to catkin_ws>/src/turtlebot_navigator/results
 rosbag play navigator_record.bag
 ```
+## ROSBAG file
+The drive link of the file is given
+```
+https://drive.google.com/file/d/1grLCmwsYrmLcAQIwCdzbjzL2Rvar4sBv/view?usp=sharing
+
+```
