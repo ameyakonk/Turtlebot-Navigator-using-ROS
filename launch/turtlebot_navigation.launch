@@ -1,0 +1,23 @@
+<launch>
+	<arg 
+    	name="rosbagRecord" 
+    	default = "false"
+	/>
+	<include
+		file = "$(find turtlebot3_gazebo)launch/turtlebot3_world.launch"
+	/>
+	<node 
+	    pkg = "turtlebot_navigator" 
+	    type = "navigator"
+	    name = "navigator"
+	    output = "screen"
+	 />
+	 <node
+	    pkg = "rosbag"
+	    name = "record"
+	    type = "record"
+	    args = "-a -x /camera/(.*) -O $(find turtlebot_navigator)/results/navigator_record.bag"
+	    output = "screen"
+	    if = "$(arg rosbagRecord)"
+	/>  
+</launch>
